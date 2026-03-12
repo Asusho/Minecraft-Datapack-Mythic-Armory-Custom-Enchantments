@@ -1,0 +1,135 @@
+{
+  "description": "Impact Instable",
+  "supported_items": "#custom_enchants:all_bows",
+  "exclusive_set": "#custom_enchants:exclusive_set/bow_effects",
+  "primary_items": "minecraft:bow",
+  "weight": 3,
+  "max_level": 1,
+  "min_cost": {
+    "base": 21,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 51,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 4,
+  "slots": ["mainhand"],
+  "effects": {
+    "minecraft:hit_block": [
+       {
+        "enchanted": "attacker",
+        "affected": "attacker",
+        "effect": {
+         "type": "change_item_damage",
+          "amount": 1
+        }
+      },
+      {
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "custom_enchants:lingering/init"
+        },
+        "requirements": {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "type": "#minecraft:arrows"
+          }
+        }
+      },
+      {
+        "effect": {
+          "type": "minecraft:explode",
+          "damage_type": "minecraft:explosion",
+          "radius": {
+            "type": "minecraft:linear",
+            "base": 1.5,
+            "per_level_above_first": 1
+          },
+          "offset": [
+            0,
+            0.5,
+            0
+          ],
+          "block_interaction": "none",
+          "small_particle": {
+            "type": "minecraft:gust_emitter_small"
+          },
+          "large_particle": {
+            "type": "minecraft:gust_emitter_large"
+          },
+          "sound": "minecraft:entity.splash_potion.break",
+          "knockback_multiplier": {
+            "type": "minecraft:linear",
+            "base": 0.5,
+            "per_level_above_first": 0.25
+          }
+        },
+        "requirements": {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "type": "#minecraft:arrows"
+          }
+        }
+      }
+    ],
+    "minecraft:post_attack": [
+      {
+        "enchanted": "attacker",
+        "affected": "attacker",
+        "effect": {
+         "type": "change_item_damage",
+          "amount": 1
+        }
+      },
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "custom_enchants:lingering/init_victim"
+        }
+      },
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:explode",
+          "damage_type": "minecraft:explosion",
+          "radius": {
+            "type": "minecraft:linear",
+            "base": 1.5,
+            "per_level_above_first": 1
+          },
+          "offset": [
+            0,
+            0.5,
+            0
+          ],
+          "block_interaction": "none",
+          "small_particle": {
+            "type": "minecraft:gust_emitter_small"
+          },
+          "large_particle": {
+            "type": "minecraft:gust_emitter_large"
+          },
+          "sound": "minecraft:entity.splash_potion.break",
+          "knockback_multiplier": {
+            "type": "minecraft:linear",
+            "base": 0.5,
+            "per_level_above_first": 0.25
+          }
+        },
+        "requirements": {
+          "condition": "minecraft:entity_properties",
+          "entity": "direct_attacker",
+          "predicate": {
+            "type": "#minecraft:arrows"
+          }
+        }
+      }
+    ]
+  }
+}

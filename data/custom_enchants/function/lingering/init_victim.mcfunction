@@ -1,0 +1,2 @@
+# On cherche la flèche la plus proche de la victime (@s ici)
+execute as @e[type=#minecraft:arrows,distance=..3,limit=1,sort=nearest] run function custom_enchants:lingering/exec with entity @s item.components."minecraft:potion_contents"

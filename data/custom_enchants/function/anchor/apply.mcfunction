@@ -1,0 +1,2 @@
+attribute @s[type=happy_ghast] minecraft:flying_speed modifier add custom_enchants:anchor -999999999 add_value
+attribute @s[type=#custom_enchants:rideable] minecraft:movement_speed modifier add custom_enchants:anchor -999999999 add_value

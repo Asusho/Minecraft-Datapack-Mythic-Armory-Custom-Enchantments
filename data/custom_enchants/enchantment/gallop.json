@@ -1,0 +1,44 @@
+{
+    "description": "Gallop",
+    "supported_items": "minecraft:saddle",
+    "weight": 2,
+    "anvil_cost": 8,
+    "max_level": 3,
+    "min_cost": {
+        "base": 15,
+        "per_level_above_first": 15
+    },
+    "max_cost": {
+      "base": 25,
+      "per_level_above_first": 15
+    },
+    "slots": [
+      "saddle"
+    ],
+    "effects": {
+      "minecraft:location_changed": [
+        {
+          "requirements": {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "passenger": {
+                "type": "minecraft:player"
+              }
+            }
+          },
+          "effect": {
+            "type": "minecraft:attribute",
+            "attribute": "minecraft:movement_speed",
+            "id": "custom_enchants:gallop.mov_speed",
+            "amount": {
+              "type": "minecraft:linear",
+              "base": 0.075,
+              "per_level_above_first": 0.05
+            },
+            "operation": "add_value"
+          }
+        }
+      ]
+    }
+  }

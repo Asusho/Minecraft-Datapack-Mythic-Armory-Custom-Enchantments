@@ -1,0 +1,148 @@
+{
+  "description": "Perce-Orage",
+  "supported_items": "#minecraft:enchantable/trident",
+  "primary_items": "#minecraft:enchantable/trident",
+  "weight": 1,
+  "max_level": 1,
+  "min_cost": {
+    "base": 40,
+    "per_level_above_first": 0
+  },
+  "max_cost": {
+    "base": 80,
+    "per_level_above_first": 0
+  },
+  "anvil_cost": 30,
+  "slots": ["mainhand"],
+  "effects": {
+    "minecraft:hit_block": [
+       {
+        "enchanted": "attacker",
+        "affected": "attacker",
+        "effect": {
+         "type": "change_item_damage",
+          "amount": 4
+        },
+        "requirements": {
+          "condition": "minecraft:weather_check",
+          "thundering": true
+        }
+      },
+      {
+        "enchanted": "attacker",
+        "affected": "attacker",
+        "effect": {
+         "type": "change_item_damage",
+          "amount": 2
+        },
+        "requirements": {
+          "condition": "minecraft:weather_check",
+          "thundering": false
+        }
+      }
+    ],
+    "minecraft:post_attack": [
+      {
+        "enchanted": "attacker",
+        "affected": "attacker",
+        "effect": {
+         "type": "change_item_damage",
+          "amount": 2
+        },
+        "requirements": {
+          "condition": "minecraft:all_of",
+            "terms": [
+              {
+                "condition": "minecraft:damage_source_properties",
+                "predicate": {
+                  "tags": [
+                    {
+                      "id": "minecraft:is_projectile",
+                      "expected": false
+                    }
+                  ]
+                }
+              },
+              {
+                "condition": "minecraft:entity_scores",
+                "entity": "attacker",
+                "scores": {
+                  "storm_charge": {
+                    "min": 5
+                  }
+                }
+              }
+            ]
+          }
+      },
+      {
+        "requirements": [
+          {
+            "condition": "minecraft:all_of",
+            "terms": [
+              {
+                "condition": "minecraft:damage_source_properties",
+                "predicate": {
+                  "tags": [
+                    {
+                      "id": "minecraft:is_projectile",
+                      "expected": true
+                    }
+                  ]
+                }
+              },
+              {
+                "condition": "minecraft:weather_check",
+                "thundering": true
+              }
+            ]
+          }
+        ],
+        "effect": {
+          "type": "minecraft:change_item_damage",
+          "amount": 4
+        },
+        "enchanted": "attacker",
+        "affected": "attacker"
+      },
+      {
+        "requirements": [
+          {
+            "condition": "minecraft:all_of",
+            "terms": [
+              {
+                "condition": "minecraft:damage_source_properties",
+                "predicate": {
+                  "tags": [
+                    {
+                      "id": "minecraft:is_projectile",
+                      "expected": true
+                    }
+                  ]
+                }
+              },
+              {
+                "condition": "minecraft:weather_check",
+                "thundering": false
+              }
+            ]
+          }
+        ],
+        "effect": {
+          "type": "minecraft:change_item_damage",
+          "amount": 2
+        },
+        "enchanted": "attacker",
+        "affected": "attacker"
+      },
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "custom_enchants:storm_harpoon/melee_charge"
+        }
+      }
+    ]
+  }
+}

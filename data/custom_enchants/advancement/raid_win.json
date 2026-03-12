@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "win_raid": {
+      "trigger": "minecraft:hero_of_the_village"
+    }
+  },
+  "rewards": {
+    "function": "custom_enchants:reward_raid_winner",
+    "loot": [
+      "minecraft:boss_spear"
+    ]
+  }
+}

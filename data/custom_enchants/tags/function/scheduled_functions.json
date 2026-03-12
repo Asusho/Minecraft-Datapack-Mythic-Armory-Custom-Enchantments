@@ -1,0 +1,7 @@
+{
+  "values": [
+    "custom_enchants:wiki/init",
+    "custom_enchants:anchor/remove",
+    "custom_enchants:add_enchantable_component/init"
+  ]
+}

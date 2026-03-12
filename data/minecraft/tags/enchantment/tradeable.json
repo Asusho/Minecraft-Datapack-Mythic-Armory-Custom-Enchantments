@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "custom_enchants:anchor",
+    "custom_enchants:gallop",
+    "custom_enchants:happy_boost",
+    "custom_enchants:hardened",
+    "custom_enchants:lifeplus",
+    "custom_enchants:kinetic_protection", "custom_enchants:switch"
+  ]
+}

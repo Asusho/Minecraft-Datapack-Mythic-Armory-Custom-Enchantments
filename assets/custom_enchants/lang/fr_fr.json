@@ -1,0 +1,38 @@
+{
+  "menu.custom_enchants.desc.wiki.option": "Liste des enchantements:",
+  "menu.custom_enchants.title.external": "Custom Enchants",
+  "menu.custom_enchants.title.wiki": "Custom Enchants: Wiki",
+
+  "enchantment.custom_enchants.anchor": "Anchor",
+  "wiki.custom_enchants.anchor": "Empêche l'entité de bouger quand vous n'êtes pas dessus \n\n• §lNiveau Max§r: I\n\n• §lCompatible avec§r: Selles, Harnais\n\n• §lIncompatibilitées§r: -\n\n• §lObtention§r: Table d'enchantement (livre), Coffres, Marchants",
+   
+  "enchantment.custom_enchants.gallop": "Gallop",
+  "wiki.custom_enchants.gallop": "Augmente la vitesse de l'entité \n\n• §lNiveau Max§r: III\n\n• §lCompatible avec§r: Selles\n\n• §lIncompatibilitées§r: -\n\n• §lObtention§r: Table d'enchantement (livre), Coffres, Marchants",
+  
+  "enchantment.custom_enchants.happy_boost": "Happy Boost",
+  "wiki.custom_enchants.happy_boost": "Augmente la vitesse du Happy Ghast \n\n• §lNiveau Max§r: IV\n\n• §lCompatible avec§r: Harnais\n\n• §lIncompatibilitées§r: -\n\n• §lObtention§r: Table d'enchantement (livre), Coffres, Marchants",
+    
+  "enchantment.custom_enchants.hardened": "Hardened",
+  "wiki.custom_enchants.hardened": "Reduit les dégats subits \n\n• §lNiveau Max§r: IV\n\n• §lCompatible avec§r: Boucliers\n\n• §lIncompatibilitées§r: -\n\n• §lObtention§r: Table d'enchantement (livre), Coffres, Marchants",
+     
+  "enchantment.custom_enchants.kinetic_protection": "Kinetic Protection",
+  "wiki.custom_enchants.kinetic_protection": "Reduit les dégats subits par l'énergie cinétique \n\n• §lNiveau Max§r: V\n\n• §lCompatible avec§r: Elytres\n\n• §lIncompatibilitées§r: -\n\n• §lObtention§r: Table d'enchantement (livre), Coffres, Marchants",
+   
+  "enchantment.custom_enchants.leech": "Leech",
+  "wiki.custom_enchants.leech": "Ajoute une chance de gagner l'effet régénération après avoir porté un coup \n\n• §lNiveau Max§r: III\n\n• §lCompatible avec§r: Epees, Haches, Trident, Masse, Lance\n\n• §lIncompatibilitées§r: -\n\n• §lObtention§r: Trésors",
+       
+  "enchantment.custom_enchants.lifeplus": "Life Plus",
+  "wiki.custom_enchants.lifeplus": "Augmente le nombre de points de vie \n\n• §lNiveau Max§r: V\n\n• §lCompatible avec§r: Armures\n\n• §lIncompatibilitées§r: -\n\n• §lObtention§r: Table d'enchantement, Coffres, Marchants",
+        
+  "enchantment.custom_enchants.night_vision": "Night Vision",
+  "wiki.custom_enchants.night_vision": "Ajoute une vision de nuit \n\n• §lNiveau Max§r: I\n\n• §lCompatible avec§r: Casques\n\n• §lIncompatibilitées§r: -\n\n• §lObtention§r: Table d'enchantement, Coffres, Marchants",
+   
+  "enchantment.custom_enchants.poison_aspect": "Poison Aspect",
+  "wiki.custom_enchants.poison_aspect": "Empoisonne la cible \n\n• §lNiveau Max§r: II\n\n• §lCompatible avec§r: Epees, Haches, Trident, Lance\n\n• §lIncompatibilitées§r: Fire Aspect\n\n• §lObtention§r: Table d'enchantement, Coffres, Marchants",
+        
+  "enchantment.custom_enchants.switch": "Switch",
+  "wiki.custom_enchants.switch": "Echange votre position avec celle de la cible \n\n• §lNiveau Max§r: I\n\n• §lCompatible avec§r: Trident\n\n• §lIncompatibilitées§r: Canalistion, Impulsion\n\n• §lObtention§r: Table d'enchantement, Coffres, Marchants",
+          
+  "enchantment.custom_enchants.werewolf": "Werewolf",
+  "wiki.custom_enchants.werewolf": "Votre chien devient un loup-garou : Gain d'armure, gain de dégats, perte de vitesse d'attaque, et applique faiblesse a l'entité attaquée \n\n• §lNiveau Max§r: I\n\n• §lCompatible avec§r: Armure pour chien\n\n• §lIncompatibilitées§r: -\n\n• §lObtention§r: Table d'enchantement (livre), Coffres, Marchants"
+   }

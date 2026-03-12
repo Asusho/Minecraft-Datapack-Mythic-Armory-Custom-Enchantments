@@ -1,0 +1,112 @@
+{
+  "description": "Résonance Sonique",
+  "supported_items": "#minecraft:enchantable/mace",
+  "weight": 2,
+  "max_level": 1,
+  "min_cost": {
+    "base": 50,
+    "per_level_above_first": 9
+  },
+  "max_cost": {
+    "base": 50,
+    "per_level_above_first": 9
+  },
+  "anvil_cost": 6,
+  "slots": ["mainhand"],
+
+  "effects": {
+    "minecraft:post_attack": [
+      
+      {
+        "enchanted": "attacker",
+        "affected": "attacker",
+        "effect": {
+         "type": "change_item_damage",
+          "amount": 1
+        },
+        "requirements": {
+          "condition": "minecraft:entity_scores",
+          "entity": "attacker",
+          "scores": {
+            "cooldown_masse": {
+              "max": 99
+            }
+          }
+        }
+      },
+      
+      {
+        "enchanted": "attacker",
+        "affected": "attacker",
+        "effect": {
+         "type": "change_item_damage",
+          "amount": 19
+        },
+        "requirements": {
+          "condition": "minecraft:entity_scores",
+          "entity": "attacker",
+          "scores": {
+            "cooldown_masse": {
+              "min": 100
+            }
+          }
+        }
+      },
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "custom_enchants:echo_strike"
+        },
+        "requirements": {
+          "condition": "minecraft:entity_scores",
+          "entity": "attacker",
+          "scores": {
+            "cooldown_masse": {
+              "min": 100
+            }
+          }
+        }
+      }
+    ],
+    "minecraft:damage": [
+      {
+        "effect": {
+          "type": "minecraft:add",
+          "value": {
+            "type": "minecraft:linear",
+            "base": 10,
+            "per_level_above_first": 2.5
+          },
+        "requirements": {
+          "condition": "minecraft:entity_scores",
+          "entity": "attacker",
+          "scores": {
+            "cooldown_masse": {
+              "min": 100
+            }
+          }
+        }
+        }
+      }
+    ],
+    "minecraft:knockback": [
+      {
+        "effect": {
+          "type": "minecraft:add",
+          "value": 4
+        },
+        "requirements": {
+          "condition": "minecraft:entity_scores",
+          "entity": "attacker",
+          "scores": {
+            "cooldown_masse": {
+              "min": 100
+            }
+          }
+        }
+      }
+    ]
+  }
+}

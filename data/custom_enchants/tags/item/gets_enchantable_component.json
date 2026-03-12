@@ -1,0 +1,9 @@
+{
+  "values": [
+    "minecraft:saddle",
+    "#custom_enchants:all_nautilus_armor",
+    "#custom_enchants:all_horse_armor",
+    "#minecraft:harnesses",
+    "minecraft:wolf_armor"
+  ]
+}

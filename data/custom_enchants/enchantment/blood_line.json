@@ -1,0 +1,46 @@
+{
+  "description": "Lignée de sang",
+  "exclusive_set": "#custom_enchants:exclusive_set/aspect",
+  "supported_items": "#minecraft:enchantable/melee_weapon",
+  "weight": 2,
+  "max_level": 1,
+  "min_cost": {
+    "base": 10,
+    "per_level_above_first": 20
+  },
+  "max_cost": {
+    "base": 60,
+    "per_level_above_first": 20
+  },
+  "anvil_cost": 4,
+  "slots": ["mainhand"],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "enchanted": "attacker",
+        "affected": "attacker",
+        "effect": {
+         "type": "change_item_damage",
+          "amount": 14
+        },
+        "requirements": {
+          "condition": "minecraft:entity_scores",
+          "entity": "attacker",
+          "scores": {
+            "soul_charges": {
+              "min": 3
+            }
+          }
+        }
+      },
+      {
+        "enchanted": "attacker",
+        "affected": "attacker",
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "custom_enchants:wither/hit_target"
+        }
+      }
+    ]
+  }
+}

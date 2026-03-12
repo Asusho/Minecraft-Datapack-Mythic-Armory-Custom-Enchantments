@@ -1,0 +1,59 @@
+{
+	"description": "Werewolf spirit",
+	"exclusive_set": "#custom_enchants:exclusive_set/spirit_wolf",
+	"supported_items": "minecraft:wolf_armor",
+	"weight": 1,
+	"max_level": 1,
+	"min_cost": {
+		"base": 30,
+		"per_level_above_first": 20
+	},
+	"max_cost": {
+		"base": 60,
+		"per_level_above_first": 20
+	},
+	"anvil_cost": 4,
+	"slots": [
+		"body"
+	],
+	"effects": {
+		"minecraft:attributes": [
+			{
+				"id": "custom_enchants:werewolf_scale",
+				"attribute": "minecraft:scale",
+				"amount": 1,
+				"operation": "add_multiplied_total"
+			},
+			{
+				"id": "custom_enchants:werewolf_armor",
+				"attribute": "minecraft:armor",
+				"amount": 15,
+				"operation": "add_value"
+			},
+			{
+				"id": "custom_enchants:werewolf_atck",
+				"attribute": "minecraft:attack_damage",
+				"amount": 4,
+				"operation": "add_value"
+			},
+			{
+				"id": "custom_enchants:werewolf_atck_spd",
+				"attribute": "minecraft:attack_speed",
+				"amount": -1,
+				"operation": "add_value"
+			},
+			{
+				"id": "custom_enchants:werewolf_spd",
+				"attribute": "minecraft:movement_speed",
+				"amount": 0.075,
+				"operation": "add_value"
+			},
+			{
+				"id": "custom_enchants:werewolf_interaction_range",
+				"attribute": "minecraft:entity_interaction_range",
+				"amount": 1,
+				"operation": "add_value"
+			}
+		]
+	}
+}

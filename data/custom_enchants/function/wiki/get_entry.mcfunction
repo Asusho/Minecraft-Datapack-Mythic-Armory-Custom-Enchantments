@@ -1,0 +1,11 @@
+execute if score @s custom_enchants.dialog_trigger.wiki matches 1 run return run function custom_enchants:wiki/send_msg {enchant:"anchor"}
+execute if score @s custom_enchants.dialog_trigger.wiki matches 2 run return run function custom_enchants:wiki/send_msg {enchant:"gallop"}
+execute if score @s custom_enchants.dialog_trigger.wiki matches 3 run return run function custom_enchants:wiki/send_msg {enchant:"happy_boost"}
+execute if score @s custom_enchants.dialog_trigger.wiki matches 4 run return run function custom_enchants:wiki/send_msg {enchant:"hardened"}
+execute if score @s custom_enchants.dialog_trigger.wiki matches 5 run return run function custom_enchants:wiki/send_msg {enchant:"kinetic_protection"}
+execute if score @s custom_enchants.dialog_trigger.wiki matches 6 run return run function custom_enchants:wiki/send_msg {enchant:"leech"}
+execute if score @s custom_enchants.dialog_trigger.wiki matches 7 run return run function custom_enchants:wiki/send_msg {enchant:"lifeplus"}
+execute if score @s custom_enchants.dialog_trigger.wiki matches 8 run return run function custom_enchants:wiki/send_msg {enchant:"night_vision"}
+execute if score @s custom_enchants.dialog_trigger.wiki matches 9 run return run function custom_enchants:wiki/send_msg {enchant:"poison_aspect"}
+execute if score @s custom_enchants.dialog_trigger.wiki matches 10 run return run function custom_enchants:wiki/send_msg {enchant:"switch"}
+execute if score @s custom_enchants.dialog_trigger.wiki matches 11 run return run function custom_enchants:wiki/send_msg {enchant:"werewolf"}

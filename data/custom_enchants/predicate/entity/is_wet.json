@@ -1,0 +1,9 @@
+{
+  "condition": "minecraft:all_of",
+  "terms": [
+    {
+      "condition": "minecraft:weather_check",
+      "is_raining": true
+    }
+  ]
+}

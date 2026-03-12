@@ -1,0 +1,150 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:nether_star"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:netherite_sword",
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.35
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:repair_cost": 30
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{blood_line:1b}"
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "custom_enchants:blood_line": 1
+              }
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Lame de Lignée de Sang",
+                "color": "dark_red",
+                "bold": true,
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Forgée dans les restes du Wither.",
+                  "color": "dark_purple",
+                  "italic": true
+                },
+                { "text": "" },
+                {
+                  "text": "☠ Explosion de Sang",
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "text": "Chargez 3 âmes (☠). Le 4ème coup",
+                  "color": "dark_gray",
+                  "italic": false
+                },
+                {
+                  "text": "libère une onde de choc vampirique",
+                  "color": "dark_gray",
+                  "italic": false
+                },
+                {
+                  "text": "qui vous soigne de 2 à 4 cœurs",
+                  "color": "dark_gray",
+                  "italic": false
+                },
+                {
+                  "text": "selon le nombre d'ennemis fauchés.",
+                  "color": "dark_gray",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bone",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 16
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:soul_sand",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 0,
+                "max": 4
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wither_skeleton_skull",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 0,
+                "max": 2
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

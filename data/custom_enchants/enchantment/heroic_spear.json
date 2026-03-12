@@ -1,0 +1,63 @@
+{
+  "description": "Apothéose",
+  "supported_items": "#custom_enchants:weapons",
+  "primary_items": "#minecraft:enchantable/melee_weapon",
+  "weight": 2,
+  "max_level": 3,
+  "min_cost": {
+    "base": 20,
+    "per_level_above_first": 15
+  },
+  "max_cost": {
+    "base": 60,
+    "per_level_above_first": 15
+  },
+  "anvil_cost": 5,
+  "slots": ["mainhand"],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "enchanted": "attacker",
+        "affected": "attacker",
+        "effect": {
+         "type": "change_item_damage",
+          "amount": 2
+        },
+        "requirements": {
+          "condition": "minecraft:entity_scores",
+          "entity": "attacker",
+          "scores": {
+            "hit_count_spear": {
+              "max": 4
+            }
+          }
+        }
+      },
+      {
+        "enchanted": "attacker",
+        "affected": "attacker",
+        "effect": {
+         "type": "change_item_damage",
+          "amount": 14
+        },
+        "requirements": {
+          "condition": "minecraft:entity_scores",
+          "entity": "attacker",
+          "scores": {
+            "hit_count_spear": {
+              "min": 5
+            }
+          }
+        }
+      },
+      {
+        "enchanted": "attacker",
+        "affected": "attacker",
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "custom_enchants:heroic_spear/direct_attack"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "type": "minecraft:multi_action",
+  "body": {
+    "type": "minecraft:plain_message",
+    "contents": {
+      "translate": "menu.custom_enchants.desc.wiki.option"
+    },
+    "width": 256
+  },
+  "can_close_with_escape": true,
+  "external_title": {
+    "translate": "menu.custom_enchants.title.external"
+  },
+  "title": {
+    "translate": "Custom Enchants: Wiki"
+  },
+  "pause": true,
+  "exit_action": {
+    "label": {
+      "translate": "mco.selectServer.close"
+    }
+  },
+  "columns": 3,
+  "actions": [
+    {
+      "label": [
+        {
+          "translate": "enchantment.custom_enchants.anchor"
+        },
+        {
+          "sprite": "minecraft:item/saddle",
+          "atlas": "minecraft:items"
+        },
+        {
+          "sprite": "minecraft:item/blue_harness",
+          "atlas": "minecraft:items"
+        }
+      ],
+
+      "tooltip": {
+        "translate": "wiki.custom_enchants.anchor"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger custom_enchants.dialog_trigger.wiki set 1"
+      }
+    },
+    {
+      "label": [
+        {
+          "translate": "enchantment.custom_enchants.gallop"
+        },
+        {
+          "sprite": "minecraft:item/saddle",
+          "atlas": "minecraft:items"
+        }
+      ],
+
+      "tooltip": {
+        "translate": "wiki.custom_enchants.gallop"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger custom_enchants.dialog_trigger.wiki set 2"
+      }
+    },
+    {
+      "label": [
+        {
+          "translate": "enchantment.custom_enchants.happy_boost"
+        },
+        {
+          "sprite": "minecraft:item/blue_harness",
+          "atlas": "minecraft:items"
+        }
+      ],
+
+      "tooltip": {
+        "translate": "wiki.custom_enchants.happy_boost"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger custom_enchants.dialog_trigger.wiki set 3"
+      }
+    },
+    {
+      "label": [
+        {
+          "translate": "enchantment.custom_enchants.hardened"
+        },
+        {
+          "sprite": "custom_enchants:item/shield",
+          "atlas": "minecraft:items"
+        }
+      ],
+
+      "tooltip": {
+        "translate": "wiki.custom_enchants.hardened"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger custom_enchants.dialog_trigger.wiki set 4"
+      }
+    },
+    {
+      "label": [
+        {
+          "translate": "enchantment.custom_enchants.kinetic_protection"
+        },
+        {
+          "sprite": "minecraft:item/elytra",
+          "atlas": "minecraft:items"
+        }
+      ],
+
+      "tooltip": {
+        "translate": "wiki.custom_enchants.kinetic_protection"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger custom_enchants.dialog_trigger.wiki set 5"
+      }
+    },
+    {
+      "label": [
+        {
+          "translate": "enchantment.custom_enchants.leech"
+        },
+        {
+          "sprite": "minecraft:item/iron_sword",
+          "atlas": "minecraft:items"
+        },
+        {
+          "sprite": "minecraft:item/iron_axe",
+          "atlas": "minecraft:items"
+        },
+        {
+          "sprite": "minecraft:item/iron_spear",
+          "atlas": "minecraft:items"
+        },
+        {
+          "sprite": "minecraft:item/trident",
+          "atlas": "minecraft:items"
+        },
+        {
+          "sprite": "minecraft:item/mace",
+          "atlas": "minecraft:items"
+        }
+      ],
+
+      "tooltip": {
+        "translate": "wiki.custom_enchants.leech"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger custom_enchants.dialog_trigger.wiki set 6"
+      }
+    },
+    {
+      "label": [
+        {
+          "translate": "enchantment.custom_enchants.lifeplus"
+        },
+        {
+          "sprite": "minecraft:item/iron_helmet",
+          "atlas": "minecraft:items"
+        },
+        {
+          "sprite": "minecraft:item/iron_chestplate",
+          "atlas": "minecraft:items"
+        },
+        {
+          "sprite": "minecraft:item/iron_leggings",
+          "atlas": "minecraft:items"
+        },
+        {
+          "sprite": "minecraft:item/iron_boots",
+          "atlas": "minecraft:items"
+        }
+      ],
+
+      "tooltip": {
+        "translate": "wiki.custom_enchants.lifeplus"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger custom_enchants.dialog_trigger.wiki set 7"
+      }
+    },
+    {
+      "label": [
+        {
+          "translate": "enchantment.custom_enchants.night_vision"
+        },
+        {
+          "sprite": "minecraft:item/iron_helmet",
+          "atlas": "minecraft:items"
+        }
+      ],
+
+      "tooltip": {
+        "translate": "wiki.custom_enchants.night_vision"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger custom_enchants.dialog_trigger.wiki set 8"
+      }
+    },
+    {
+      "label": [
+        {
+          "translate": "enchantment.custom_enchants.poison_aspect"
+        },
+        {
+          "sprite": "minecraft:item/iron_sword",
+          "atlas": "minecraft:items"
+        },
+        {
+          "sprite": "minecraft:item/iron_axe",
+          "atlas": "minecraft:items"
+        },
+        {
+          "sprite": "minecraft:item/iron_spear",
+          "atlas": "minecraft:items"
+        },
+        {
+          "sprite": "minecraft:item/trident",
+          "atlas": "minecraft:items"
+        },
+        {
+          "sprite": "minecraft:item/mace",
+          "atlas": "minecraft:items"
+        }
+      ],
+
+      "tooltip": {
+        "translate": "wiki.custom_enchants.poison_aspect"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger custom_enchants.dialog_trigger.wiki set 9"
+      }
+    },
+    {
+      "label": [
+        {
+          "translate": "enchantment.custom_enchants.switch"
+        },
+        {
+          "sprite": "minecraft:item/trident",
+          "atlas": "minecraft:items"
+        }
+      ],
+
+      "tooltip": {
+        "translate": "wiki.custom_enchants.switch"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger custom_enchants.dialog_trigger.wiki set 10"
+      }
+    },
+    {
+      "label": [
+        {
+          "translate": "enchantment.custom_enchants.werewolf"
+        },
+        {
+          "sprite": "minecraft:item/wolf_armor",
+          "atlas": "minecraft:items"
+        }
+      ],
+
+      "tooltip": {
+        "translate": "wiki.custom_enchants.werewolf"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger custom_enchants.dialog_trigger.wiki set 11"
+      }
+    }
+  ]
+}

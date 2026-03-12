@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "minecraft:riptide",
+      "required": false
+    },
+    {
+      "id": "minecraft:channeling",
+      "required": false
+    },
+    {
+      "id": "custom_enchants:switch",
+      "required": false
+    }
+  ]
+}
