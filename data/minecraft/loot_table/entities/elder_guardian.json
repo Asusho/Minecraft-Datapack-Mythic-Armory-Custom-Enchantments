@@ -22,7 +22,10 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:repair_cost": 30
+                "minecraft:repair_cost": 30,
+                "minecraft:custom_data": {
+                  "elder_trident": true
+                }
               }
             },
             {
