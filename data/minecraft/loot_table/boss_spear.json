@@ -23,7 +23,7 @@
             {
               "function": "minecraft:set_enchantments",
               "enchantments": {
-                "custom_enchants:heroic_spear": 1,
+                "custom_enchants:apotheosis": 1,
                 "minecraft:lunge": 3
               }
             },
