@@ -7,10 +7,6 @@
     {
         "id": "custom_enchants:poison_aspect",
         "required": false
-    },
-    {
-        "id": "custom_enchants:soul_harvest",
-        "required": false
     }
   ]
 }

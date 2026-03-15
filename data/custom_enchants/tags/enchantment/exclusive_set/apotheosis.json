@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+        "id": "minecraft:mending",
+        "required": false
+    },
+    {
+        "id": "custom_enchants:apotheosis",
+        "required": false
+    },    
+    {
+        "id": "nova_structures:photosynthesis",
+        "required": false
+    }
+  ]
+}

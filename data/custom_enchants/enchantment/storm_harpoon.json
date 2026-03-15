@@ -2,6 +2,7 @@
   "description": "Perce-Orage",
   "supported_items": "#minecraft:enchantable/trident",
   "primary_items": "#minecraft:enchantable/trident",
+  "exclusive_set": "#custom_enchants:exclusive_set/storm_harpoon",
   "weight": 1,
   "max_level": 1,
   "min_cost": {

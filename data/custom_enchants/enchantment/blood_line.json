@@ -1,6 +1,6 @@
 {
   "description": "Lignée de sang",
-  "exclusive_set": "#custom_enchants:exclusive_set/aspect",
+  "exclusive_set": "#custom_enchants:exclusive_set/blood_line",
   "supported_items": "#minecraft:enchantable/melee_weapon",
   "weight": 2,
   "max_level": 1,

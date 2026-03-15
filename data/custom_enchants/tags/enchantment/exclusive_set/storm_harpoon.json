@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+        "id": "minecraft:mending",
+        "required": false
+    },
+    {
+        "id": "custom_enchants:storm_harpoon",
+        "required": false
+    },
+    {
+        "id": "minecraft:channeling",
+        "required": false
+    },   
+    {
+        "id": "nova_structures:photosynthesis",
+        "required": false
+    }
+  ]
+}

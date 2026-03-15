@@ -2,6 +2,7 @@
   "description": "Apothéose",
   "supported_items": "#custom_enchants:weapons",
   "primary_items": "#minecraft:enchantable/melee_weapon",
+  "exclusive_set": "#custom_enchants:exclusive_set/apotheosis",
   "weight": 2,
   "max_level": 1,
   "min_cost": {
