@@ -1,7 +1,7 @@
 {
   "description": "Impact Instable",
   "supported_items": "#custom_enchants:all_bows",
-  "exclusive_set": "#custom_enchants:exclusive_set/bow_effects",
+  "exclusive_set": "#custom_enchants:exclusive_set/lingering",
   "primary_items": "minecraft:bow",
   "weight": 3,
   "max_level": 1,

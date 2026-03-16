@@ -7,6 +7,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:diamond_spear",
+          "tag": "heroic_spear",
           "conditions": [
             {
               "condition": "minecraft:random_chance",
@@ -17,7 +18,10 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:repair_cost": 30
+                "minecraft:repair_cost": 30,
+                "minecraft:custom_data": {
+                  "heroic_spear": true
+                }
               }
             },
             {
@@ -45,7 +49,11 @@
                   "italic": true
                 },
                 { "text": "" },
-                { "text": "⚡ Cadence de Guerre (Combo 5 coups) :", "color": "green", "italic": false },
+                {
+                  "text": "⚡ Cadence de Guerre (Combo 5 coups) :",
+                  "color": "green",
+                  "italic": false
+                },
                 {
                   "text": "   Force & Saturation",
                   "color": "white",
@@ -56,7 +64,8 @@
                   "text": "🏹 Aube du Conquérant (20 kills) :",
                   "color": "gold",
                   "italic": false
-                },{
+                },
+                {
                   "text": "   Pluie de flèches & Buffs de zone",
                   "color": "white",
                   "italic": false

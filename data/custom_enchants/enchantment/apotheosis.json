@@ -2,6 +2,7 @@
   "description": "Apothéose",
   "supported_items": "#custom_enchants:weapons",
   "primary_items": "#minecraft:enchantable/melee_weapon",
+  "exclusive_set": "#custom_enchants:exclusive_set/apotheosis",
   "weight": 2,
   "max_level": 1,
   "min_cost": {
@@ -15,13 +16,79 @@
   "anvil_cost": 5,
   "slots": ["mainhand"],
   "effects": {
+    "minecraft:damage": [
+      {
+        "requirements": {
+          "condition": "minecraft:entity_scores",
+          "entity": "attacker",
+          "scores": {
+            "hit_count_spear": 5
+          }
+        },
+        "effect": {
+          "type": "minecraft:add",
+          "value": 10
+        }
+      },{
+        "requirements": {
+          "condition": "minecraft:entity_scores",
+          "entity": "attacker",
+          "scores": {
+            "hit_count_spear": 4
+          }
+        },
+        "effect": {
+          "type": "minecraft:add",
+          "value": 6
+        }
+      },
+      {
+        "requirements": {
+          "condition": "minecraft:entity_scores",
+          "entity": "attacker",
+          "scores": {
+            "hit_count_spear": 3
+          }
+        },
+        "effect": {
+          "type": "minecraft:add",
+          "value": 4
+        }
+      },
+      {
+        "requirements": {
+          "condition": "minecraft:entity_scores",
+          "entity": "attacker",
+          "scores": {
+            "hit_count_spear": 2
+          }
+        },
+        "effect": {
+          "type": "minecraft:add",
+          "value": 2
+        }
+      },
+      {
+        "requirements": {
+          "condition": "minecraft:entity_scores",
+          "entity": "attacker",
+          "scores": {
+            "hit_count_spear": 1
+          }
+        },
+        "effect": {
+          "type": "minecraft:add",
+          "value": 1
+        }
+      }
+    ],
     "minecraft:post_attack": [
       {
         "enchanted": "attacker",
         "affected": "attacker",
         "effect": {
-         "type": "change_item_damage",
-          "amount": 2
+          "type": "change_item_damage",
+          "amount": 1
         },
         "requirements": {
           "condition": "minecraft:entity_scores",
@@ -37,8 +104,8 @@
         "enchanted": "attacker",
         "affected": "attacker",
         "effect": {
-         "type": "change_item_damage",
-          "amount": 14
+          "type": "change_item_damage",
+          "amount": 9
         },
         "requirements": {
           "condition": "minecraft:entity_scores",

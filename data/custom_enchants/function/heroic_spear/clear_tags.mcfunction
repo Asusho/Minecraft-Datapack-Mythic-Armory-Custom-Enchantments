@@ -1,0 +1,1 @@
+tag @e[tag=arrow_target] remove arrow_target

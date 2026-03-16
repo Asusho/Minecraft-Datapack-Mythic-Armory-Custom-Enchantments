@@ -1,0 +1,25 @@
+{
+  "values": [
+    {
+        "id": "minecraft:mending",
+        "required": false
+    },
+    {
+        "id": "custom_enchants:fire_aspect",
+        "required": false
+    },
+    {
+        "id": "custom_enchants:poison_aspect",
+        "required": false
+    },
+    {
+        "id": "custom_enchants:leech",
+        "required": false
+    },
+    
+    {
+        "id": "nova_structures:photosynthesis",
+        "required": false
+    }
+  ]
+}

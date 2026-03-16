@@ -1,0 +1,21 @@
+{
+  "values": [
+    {
+        "id": "minecraft:mending",
+        "required": false
+    },
+    {
+        "id": "custom_enchants:lingering",
+        "required": false
+    },
+    {
+        "id": "minecraft:infinity",
+        "required": false
+    },
+    
+    {
+        "id": "nova_structures:photosynthesis",
+        "required": false
+    }
+  ]
+}

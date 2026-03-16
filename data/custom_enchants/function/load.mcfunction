@@ -27,8 +27,10 @@ scoreboard objectives add storm_ready dummy
 
 
 # POUR LA LANCE
+
+scoreboard objectives add spear_charge dummy "Charges Lance"
 scoreboard objectives add hit_count_spear dummy
-scoreboard objectives add kill_count totalKillCount
+scoreboard objectives add spear_kill_count totalKillCount
 scoreboard objectives add sneak_check custom:sneak_time
 scoreboard objectives add combo_ready dummy
 scoreboard objectives add storm_arrow_ready dummy
