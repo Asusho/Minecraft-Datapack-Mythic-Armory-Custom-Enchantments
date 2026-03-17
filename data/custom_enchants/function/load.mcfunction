@@ -7,10 +7,25 @@ scoreboard objectives add custom_enchants.dialog_trigger.wiki trigger {"bold":fa
 
 scoreboard objectives add cooldown_masse dummy
 
+# POUR L'ARC
+
+scoreboard objectives add bow_charges dummy "Victimes à l'arc"
+scoreboard objectives add kills_bow totalKillCount
+
+scoreboard objectives add use_bow minecraft.used:minecraft.bow
+
+
 
 # POUR L'EPEE
 
+team add wither_army "Armée du Wither"
+team modify wither_army friendlyFire false
+team modify wither_army collisionRule never
+
+scoreboard objectives add combo_charges dummy "Charges Combo"
 scoreboard objectives add soul_charges dummy "Charges d'Âmes"
+scoreboard objectives add sword_kills_total totalKillCount
+scoreboard objectives add soul_charges_ready dummy
 
 
 # POUR LE TRIDENT

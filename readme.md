@@ -11,8 +11,10 @@ Chaque boss majeur possède désormais une chance de looter une relique unique d
 
 ### ⚜️ Lance du Jugement (Raid Boss)
 *L'arme des champions, imprégnée de l'enchantement **Apothéose**.*
-* **Cadence de Guerre :** Enchaînez 5 coups pour recevoir **Force** et **Saturation**.
-* **Aube du Conquérant :** Après 20 éliminations, regardez le ciel et accroupissez-vous pour invoquer une pluie de flèches et buffer vos alliés (**Force, Vitesse, Résistance, Absorption**).
+
+*Plus vous touchez votre cible, plus l'arme devient dévastatrice.*
+* **Cadence de Guerre :** Enchaînez 5 coups pour recevoir **Force**, **Saturation**, **Vitesse**, **Resistance** et **Regeneration**. Chaque coup réussi augmente la puissance du prochain (jusqu'à +10 au 5ème).
+* **Aube du Conquérant :** Après 20 éliminations, regardez le ciel et accroupissez-vous pour invoquer une pluie de flèches et buffer vos alliés (**Force, Vitesse, Résistance, Absorption, Regeneration**). Vous recevez ces buffs dans leur version améliorés, mais pour une plus courte durée avant de recevoir les mêmes buffs que vos alliés.
 
 ### 💀 Lame de Lignée de Sang (Wither)
 *Une épée en néthérite forgée dans les restes du Wither, dotée de **Lignée de Sang**.*

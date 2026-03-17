@@ -55,7 +55,7 @@
       },
       {
         "enchanted": "attacker",
-        "affected": "victim",
+        "affected": "attacker",
         "effect": {
           "type": "minecraft:run_function",
           "function": "custom_enchants:echo_strike"

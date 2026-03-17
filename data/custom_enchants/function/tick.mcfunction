@@ -37,7 +37,19 @@ execute as @a if items entity @s weapon.mainhand minecraft:netherite_sword[minec
 
 
 
+# Si le joueur a fait au moins 1 kill avec l'epee enchanté en main
+execute as @a[scores={sword_kills_total=1..}] if items entity @s weapon.mainhand #minecraft:swords[minecraft:custom_data={blood_line:true}] run function custom_enchants:wither/increase_charge
 
+# On remet impérativement le compteur de kills à 0 pour pouvoir détecter le suivant
+scoreboard players set @a[scores={sword_kills_total=1..}] sword_kills_total 0
+
+
+# Si chargé ET regarde le ciel ET s'accroupit (Sneak)
+execute as @a[scores={soul_charges=20..}, x_rotation=-90..-60, predicate=minecraft:is_sneaking] if items entity @s weapon.mainhand #minecraft:swords[minecraft:custom_data={blood_line:true}] at @s run function custom_enchants:wither/trigger_undead_call
+
+
+execute as @e[tag=wither_ally] at @s run data modify entity @s last_hurt_by_mob set from entity @e[type=#custom_enchants:hostile,tag=!wither_ally,distance=..15,sort=nearest,limit=1] UUID
+execute at @e[tag=wither_ally] run particle minecraft:soul_fire_flame ~ ~1 ~ 0.2 1 0.2 0.01 1
 
 ##################################################################################################################
 ########################################### MECANIQUES POUR LE TRIDENT ###########################################
@@ -51,7 +63,7 @@ scoreboard players set @a[scores={kills_total=1..}] kills_total 0
 
 
 # Si chargé ET regarde le ciel ET s'accroupit (Sneak)
-execute as @a[scores={storm_charges=30..}, x_rotation=-90..-60, predicate=minecraft:is_sneaking] if items entity @s weapon.mainhand trident[enchantments~[{enchantment:"custom_enchants:storm_harpoon"}]] at @s run function custom_enchants:storm_harpoon/activate_storm
+execute as @a[scores={storm_charges=30..}, x_rotation=-90..-60, predicate=minecraft:is_sneaking] if items entity @s weapon.mainhand trident[minecraft:custom_data={harpon_tempete:true}] at @s run function custom_enchants:storm_harpoon/activate_storm
 
 
 # Affiche le HUD uniquement si le joueur tient le Perce-Orage
@@ -89,23 +101,61 @@ execute as @e[tag=storm_target, scores={storm_timer=1}] at @s run function custo
 ############################################ MECANIQUES POUR LA LANCE ############################################
 ##################################################################################################################
 # Affiche le HUD uniquement si le joueur tient la lance
-execute as @a if items entity @s weapon.mainhand #minecraft:spears[minecraft:custom_data={heroic_spear:true}] run function custom_enchants:heroic_spear/display_hud
+execute as @a if items entity @s weapon.mainhand #minecraft:spears[minecraft:custom_data={heroic_spear:true}] run function custom_enchants:apotheosis/display_hud
 
 
 # Si le joueur a fait au moins 1 kill avec le trident enchanté en main
-execute as @a[scores={spear_kill_count=1..}] if items entity @s weapon.mainhand #minecraft:spears[minecraft:custom_data={heroic_spear:true}] run function custom_enchants:heroic_spear/increase_charge
+execute as @a[scores={spear_kill_count=1..}] if items entity @s weapon.mainhand #minecraft:spears[minecraft:custom_data={heroic_spear:true}] run function custom_enchants:apotheosis/increase_charge
 
 # On remet impérativement le compteur de kills à 0 pour pouvoir détecter le suivant
 scoreboard players set @a[scores={spear_kill_count=1..}] spear_kill_count 0
 
 
 # Dans tick.mcfunction
-execute as @a[scores={spear_charge=20..}, x_rotation=-90..-60, predicate=minecraft:is_sneaking] if items entity @s weapon.mainhand #minecraft:spears[minecraft:custom_data={heroic_spear:true}] at @s run function custom_enchants:heroic_spear/trigger_arrow_rain
+execute as @a[scores={spear_charge=20..}, x_rotation=-90..-60, predicate=minecraft:is_sneaking] if items entity @s weapon.mainhand #minecraft:spears[minecraft:custom_data={heroic_spear:true}] at @s run function custom_enchants:apotheosis/trigger_arrow_rain
 
 # Chaque marqueur de nuage génère des particules à chaque tick
 execute at @e[tag=CloudMarker] run particle minecraft:cloud ~ ~ ~ 0.8 0.1 0.8 0.02 15
 
 
 
-# 1. Empêcher le score de dépasser 20 (optionnel, pour la propreté)
+# Empêcher le score de dépasser 20 (optionnel, pour la propreté)
 execute as @a[scores={spear_charge=21..}] run scoreboard players set @s spear_charge 20
+
+
+
+
+##################################################################################################################
+############################################## MECANIQUES POUR L'ARC #############################################
+##################################################################################################################
+
+# Affiche le HUD uniquement si le joueur tient l'arc
+execute as @a if items entity @s weapon.mainhand bow[minecraft:custom_data={ender_bow:true}] run function custom_enchants:lingering/display_hud
+
+
+# Si le joueur a fait au moins 1 kill avec l'arc enchanté en main
+execute as @a[scores={kills_bow=1..}] if items entity @s weapon.mainhand bow[minecraft:custom_data={ender_bow:true}] run function custom_enchants:lingering/increase_charge
+
+# On remet impérativement le compteur de kills à 0 pour pouvoir détecter le suivant
+scoreboard players set @a[scores={kills_bow=1..}] kills_bow 0
+
+# Si le joueur tire en étant accroupi et a le score requis
+execute as @a[scores={use_bow=1.., bow_charges=10..}, predicate=minecraft:is_sneaking] at @s run function custom_enchants:lingering/setup_vortex_arrow
+scoreboard players set @a use_bow 0
+
+
+execute as @e[tag=vortex_arrow] at @s run particle minecraft:end_rod ~ ~ ~ 0.1 0.1 0.1 0.05 5 normal
+
+# Si la flèche touche le sol ou une entité (NBT inGround:1b)
+execute at @e[tag=vortex_arrow, nbt={inGround:1b}] run function custom_enchants:lingering/spawn_vortex
+
+
+# 1. Effets visuels (Particules qui tourbillonnent)
+execute at @e[tag=vortex_active] run particle minecraft:reverse_portal ~ ~1 ~ 1 1 1 0.1 100
+
+# 2. L'aspiration : On force les entités à regarder le centre et à avancer vers lui
+execute as @e[tag=vortex_active] at @s run execute as @e[type=!player, type=!item, distance=0.1..10] at @s facing entity @e[tag=vortex_active, limit=1] feet run tp @s ^ ^ ^0.1
+
+# 3. Son d'aspiration (bas et sourd)
+execute at @e[tag=vortex_active] run playsound minecraft:block.beacon.ambient ambient @a ~ ~ ~ 1 0.5
+

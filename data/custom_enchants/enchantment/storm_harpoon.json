@@ -22,7 +22,7 @@
         "affected": "attacker",
         "effect": {
          "type": "change_item_damage",
-          "amount": 4
+          "amount": 9
         },
         "requirements": {
           "condition": "minecraft:weather_check",
@@ -34,7 +34,7 @@
         "affected": "attacker",
         "effect": {
          "type": "change_item_damage",
-          "amount": 2
+          "amount": 3
         },
         "requirements": {
           "condition": "minecraft:weather_check",
@@ -101,7 +101,7 @@
         ],
         "effect": {
           "type": "minecraft:change_item_damage",
-          "amount": 4
+          "amount": 9
         },
         "enchanted": "attacker",
         "affected": "attacker"
@@ -131,7 +131,7 @@
         ],
         "effect": {
           "type": "minecraft:change_item_damage",
-          "amount": 2
+          "amount": 3
         },
         "enchanted": "attacker",
         "affected": "attacker"

@@ -26,7 +26,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:repair_cost": 30
+                "minecraft:repair_cost": 20
               }
             },
             {
@@ -52,18 +52,18 @@
               "function": "minecraft:set_lore",
               "lore": [
                 {
-                  "text": "Forgée dans les restes du Wither.",
+                  "text": "Une lame forgée dans les cendres du Néant.",
                   "color": "dark_purple",
                   "italic": true
                 },
                 { "text": "" },
                 {
-                  "text": "☠ Explosion de Sang",
+                  "text": "✦ Soif de Vie :",
                   "color": "red",
                   "italic": false
                 },
                 {
-                  "text": "Chargez 3 âmes (☠). Le 4ème coup",
+                  "text": "Chargez 3 coups (☠). Le 4ème coup",
                   "color": "dark_gray",
                   "italic": false
                 },
@@ -79,6 +79,22 @@
                 },
                 {
                   "text": "selon le nombre d'ennemis fauchés.",
+                  "color": "dark_gray",
+                  "italic": false
+                },
+                { "text": "" },
+                {
+                  "text": "✦ Légion Flétrie :",
+                  "color": "red",
+                  "italic": false
+                },
+                {
+                  "text": "Accumulez 20 âmes pour invoquer",
+                  "color": "dark_gray",
+                  "italic": false
+                },
+                {
+                  "text": "une armée de squelettes à vos ordres.",
                   "color": "dark_gray",
                   "italic": false
                 }

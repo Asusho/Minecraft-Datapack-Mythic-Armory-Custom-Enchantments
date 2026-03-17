@@ -88,7 +88,7 @@
         "affected": "attacker",
         "effect": {
           "type": "change_item_damage",
-          "amount": 1
+          "amount": 0
         },
         "requirements": {
           "condition": "minecraft:entity_scores",
@@ -105,7 +105,7 @@
         "affected": "attacker",
         "effect": {
           "type": "change_item_damage",
-          "amount": 9
+          "amount": 4
         },
         "requirements": {
           "condition": "minecraft:entity_scores",
@@ -122,7 +122,7 @@
         "affected": "attacker",
         "effect": {
           "type": "minecraft:run_function",
-          "function": "custom_enchants:heroic_spear/direct_attack"
+          "function": "custom_enchants:apotheosis/direct_attack"
         }
       }
     ]

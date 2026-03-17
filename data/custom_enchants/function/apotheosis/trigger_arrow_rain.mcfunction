@@ -28,4 +28,4 @@ execute at @s run effect give @s minecraft:regeneration 10 1
 
 # 3. Programmer la chute des flèches dans 20 ticks (1 seconde)
 # On augmente un peu le délai pour profiter du nuage
-schedule function custom_enchants:heroic_spear/init_arrow_rain 20t append
+schedule function custom_enchants:apotheosis/init_arrow_rain 20t append

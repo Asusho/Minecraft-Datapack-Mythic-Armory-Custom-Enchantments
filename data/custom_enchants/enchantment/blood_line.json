@@ -21,7 +21,7 @@
         "affected": "attacker",
         "effect": {
          "type": "change_item_damage",
-          "amount": 14
+          "amount": 7
         },
         "requirements": {
           "condition": "minecraft:entity_scores",
